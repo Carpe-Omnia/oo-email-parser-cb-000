@@ -9,10 +9,7 @@ class EmailParser
   end
 
   def parse
-    comma = @emails.split(", ")
-    rerun = comma.join(" ")
-    space = rerun.split(" ")
-    return space.uniq
+    return @emails.split(", ").join(" ").split(" ").uniq
   end
 
 end
